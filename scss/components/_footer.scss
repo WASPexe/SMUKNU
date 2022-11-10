@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    background-color: $footer;
+    
+    &-icons{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        i.fa-brands{
+            font-size: 40px;
+            color: $white;
+            align-self: center;
+            cursor:pointer;
+        }
+
+    }
+    &-info{
+        font-size: $xsmall;
+        text-align: center;
+        padding-bottom: 1.5rem;
+        cursor:pointer;
+    }
+}

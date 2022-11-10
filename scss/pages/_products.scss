@@ -1,0 +1,24 @@
+.products-header-container{
+    background-color: $black !important; //I know bad practise..
+    opacity: 0.9;
+    color: $white;
+
+    .products-p{
+        font-weight: 100;
+    }
+}
+
+.products{
+    margin-top: 2rem;
+
+    .products-heading{
+        font-size: $heading;
+        text-align: center;
+        @include textStyles(uppercase);
+        font-weight: bold;
+    }
+    
+    :nth-child(2){
+        color: $mainPink;
+    }
+}

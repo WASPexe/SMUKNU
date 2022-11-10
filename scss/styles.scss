@@ -1,0 +1,29 @@
+//GLOBAL STYLESHEET
+
+/////////////////////////////
+////////// IMPORTS //////////
+/////////////////////////////
+
+// VARIBALES
+@import "./variables/variables";
+
+// MIXINS
+@import "./mixins/mixins";
+
+// FONTS
+@import "./fonts/fonts";
+
+// BASE
+@import "./base/base";
+
+// THEMES
+@import "./themes/themes";
+
+// PAGES
+@import "./pages/pages";
+
+//COMPONENTS
+@import "./components/components";
+
+// UTILITIES
+@import "./utilities/utilities";

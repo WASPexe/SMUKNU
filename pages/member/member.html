@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- LINKS -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- FONT AWEWSOME -->
+    <script src="https://kit.fontawesome.com/d6b9648251.js" crossorigin="anonymous"></script>
+
+    <title>SMUKNU - Medlem</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="/index.html"><img src="/src/img/smuknu_logo.png" alt="SMUKNU Logo" class="logo-img"></a>
+        <input type="checkbox" id="check" class="checkbox" hidden>
+        <div class="hamburger-menu">
+            <label for="check" class="menu">
+                <div class="menu-line menu-line-1"></div>
+                <div class="menu-line menu-line-2"></div>
+                <div class="menu-line menu-line-3"></div>
+            </label>
+        </div>
+        <div class="navbar-navigation">
+            <div class="navbar-navigation-top">
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="/index.html" class="nav-list-link">Forsiden</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/pages/products/products.html" class="nav-list-link">Vores produkter</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/pages/faq/faq.html" class="nav-list-link">Spørg om sundhed</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="/pages/member/member.html" class="nav-list-link">Bliv medlem</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- HEADER -->
+    <header class="container-header">
+        <div class="container-header-img">
+            <img src="/src/img/subscribers.jpg" alt="">
+        </div>
+
+        <div id="member-container" class="container-text member-container">
+            <h1 class="heading member-heading">bliv medlem</h1>
+            <p class="member-p">Opret dig som medlem og få flere fordele og nyheder I det øjeblik vi har dem.</p>
+            <p class="member-p">Send gerne ris eller ros med når du melder dig ind, vi er altid parate til dialog.</p>
+        </div>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- FORM SECTION -->
+    <section>
+        <form class="form" action="">
+            
+            <label for="fname">Fulde navn</label>
+            <input type="text" id="fname" name="fullname">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+
+            <label for="inqury">Ris og/eller ros</label>
+            <textarea id="inqury" name="inqury"></textarea>
+            
+            <input id="submitBtn" type="submit" value="Opret">
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-icons">
+            <i class="fa-brands fa-facebook"><a href="https://www.facebook.com/"></a></i>
+            <i class="fa-brands fa-instagram"><a href="https://www.instagram.com/"></a></i>
+            <i class="fa-brands fa-pinterest"><a href="https://www.pinterest.dk/"></a></i>
+            <i class="fa-brands fa-twitter"><a href="https://twitter.com/?lang=da"></a></i>
+            <i class="fa-brands fa-youtube"><a href="https://www.youtube.com/"></a></i>
+        </div>
+
+        <div class="footer-info">
+            <p>mail@smuk.nu</p>
+            <p>+45 123 345 33</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+    
+
+<script src="./member-js/member.js"></script>
+</body>
+</html>

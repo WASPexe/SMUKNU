@@ -1,0 +1,56 @@
+.container-header{
+    height: 100%;
+    width: 100vw;
+    
+    &-img{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+
+        img{
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+            object-fit:cover;
+        }
+    }
+    
+    .container-text{
+        width: 100vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $memberBG;
+        z-index: 1;
+        @include flexLayout;
+        flex-direction: column;
+        text-align: center;
+        padding: 42px 0px 42px 0px;
+        
+        h1{
+            font-size: $heading;
+            @include textStyles(uppercase);
+            font-weight: bold;
+        }
+
+        p{
+            font-size: $small;
+            padding: 14px 0px 14px 0px;
+        }
+
+        button{
+            width: 20rem;
+            height: 3.75rem;
+            border-radius: 50px;
+            border: none;
+            background-color:$mainPink;
+            box-shadow: 0px 2px 5px darkgray;
+
+            a{
+                @include button;
+            }
+        }
+    }
+}

@@ -1,0 +1,602 @@
+@charset "UTF-8";
+/* GENERAL VARIABLES */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+.navbar .hamburger-menu .menu {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* FONT PROBLEM LØSNING - RESET CSS Credits: Meyerweb.com */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+body {
+  font-size: 22px;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* html{
+    width: 380px;
+} */
+.rec-products {
+  width: 100%;
+}
+.rec-products-heading {
+  color: black;
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+  padding: 44px 0px 22px 0px;
+}
+.rec-products .rec-products-heading h2:nth-child(2) {
+  color: #FA96AA;
+}
+
+.reviews {
+  width: 100%;
+}
+.reviews-heading {
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+  font-size: 54px;
+  font-weight: bold;
+  padding-top: 44px;
+}
+.reviews-heading h2:nth-child(1) {
+  color: #FA96AA;
+}
+.reviews-container {
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: auto;
+  margin-top: 57px;
+  font-size: 18px;
+  color: #707070;
+}
+.reviews-container img {
+  border: 10px solid #FA96AA;
+  border-radius: 50%;
+}
+.reviews-container .review {
+  margin-top: 46px;
+}
+.reviews-container-customer {
+  width: 100%;
+  margin-top: 18px;
+  border-bottom: 1px solid #FA96AA;
+  padding-bottom: 1.5rem;
+}
+.reviews-container .reviews-container-customer p:nth-child(1) {
+  font-weight: bold;
+}
+
+#faq-container {
+  background-color: #FA96AA;
+}
+#faq-container .faq-heading, #faq-container .faq-p {
+  color: #FFFFFF;
+}
+#faq-container .faq-heading {
+  font-size: 54px;
+}
+#faq-container .faq-p {
+  font-size: 18px;
+  font-weight: 100;
+  padding: 1rem;
+}
+
+.accordion-section {
+  margin: 3rem 1rem 3rem 1rem;
+}
+.accordion-section .accordion {
+  background-color: #FFFFFF;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-top: 1px solid #FA96AA;
+  font-family: "Quicksand";
+}
+.accordion-section .accordion i {
+  font-weight: bold;
+  font-size: 54px;
+  color: #d9d9d9;
+  justify-self: flex-start;
+  margin-right: 0.5rem;
+}
+.accordion-section .active i, .accordion-section .accordion:hover {
+  background-color: #FFFFFF;
+  font-weight: bold;
+  color: #FA96AA;
+}
+.accordion-section .panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  margin-left: 3rem;
+  font-size: 14px;
+}
+.accordion-section .panel-tekst {
+  line-height: 18px;
+  padding-bottom: 1.5rem;
+}
+.accordion-section div:nth-child(3) {
+  border-bottom: 1px solid #FA96AA;
+}
+
+#member-container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+#member-container h1 {
+  color: #FA96AA;
+}
+#member-container p {
+  margin: 0rem 1.5rem 0rem 1.5rem;
+}
+
+.form {
+  width: 85%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.form label {
+  font-size: 20px;
+  padding-bottom: 0.5rem;
+}
+.form input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 1rem;
+}
+.form #inqury {
+  height: 219px;
+}
+.form #submitBtn {
+  margin-top: 1rem;
+  width: 8rem;
+  height: 2.5rem;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Quicksand";
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: #FA96AA;
+  font-weight: 500;
+}
+
+.products-header-container {
+  background-color: #000000 !important;
+  opacity: 0.9;
+  color: #FFFFFF;
+}
+.products-header-container .products-p {
+  font-weight: 100;
+}
+
+.products {
+  margin-top: 2rem;
+}
+.products .products-heading {
+  font-size: 54px;
+  text-align: center;
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.products :nth-child(2) {
+  color: #FA96AA;
+}
+
+/* Hamburger menu ikon + placering */
+.navbar {
+  position: fixed;
+  z-index: 200;
+  background-color: white;
+  height: 15vh;
+  width: 100vw;
+  -webkit-box-shadow: 2px 2px 5px darkgray;
+          box-shadow: 2px 2px 5px darkgray;
+}
+.navbar .hamburger-menu {
+  width: 29px;
+  height: 26px;
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 300;
+}
+.navbar .hamburger-menu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.navbar .hamburger-menu .menu-line {
+  width: 100%;
+  height: 4px;
+  background-color: #FA96AA;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
+}
+.navbar .logo-img {
+  position: fixed;
+  width: 148px;
+  height: 40px;
+  top: 5%;
+  left: 5%;
+}
+.navbar-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar-navigation-top {
+  width: 100vw;
+  height: 40vh;
+  background-color: #000000;
+  border-radius: 0px 0px 15px 15px;
+  opacity: 0.9;
+  position: fixed;
+  top: -100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: top 0.8s cubic-bezier(1, 0, 0, 1);
+  transition: top 0.8s cubic-bezier(1, 0, 0, 1);
+}
+.navbar-navigation .nav-list-item {
+  list-style: none;
+}
+.navbar-navigation .nav-list-link {
+  font-family: "Quicksand";
+  font-size: 20px;
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  margin: 20px;
+  text-align: right;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.navbar-navigation .nav-list-link:hover {
+  color: #FA96AA;
+  letter-spacing: 4px;
+}
+
+.checkbox:checked ~ .navbar-navigation .navbar-navigation-top {
+  top: 15%;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  -webkit-transform: rotateZ(-40deg);
+          transform: rotateZ(-40deg);
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0;
+}
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  -webkit-transform: rotateZ(40deg);
+          transform: rotateZ(40deg);
+}
+
+.container-header {
+  height: 100%;
+  width: 100vw;
+}
+.container-header-img {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: hidden;
+}
+.container-header-img img {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container-header .container-text {
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #F7F0F2;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 42px 0px 42px 0px;
+}
+.container-header .container-text h1 {
+  font-size: 54px;
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.container-header .container-text p {
+  font-size: 18px;
+  padding: 14px 0px 14px 0px;
+}
+.container-header .container-text button {
+  width: 20rem;
+  height: 3.75rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #FA96AA;
+  -webkit-box-shadow: 0px 2px 5px darkgray;
+          box-shadow: 0px 2px 5px darkgray;
+}
+.container-header .container-text button a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Quicksand";
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+}
+
+.footer {
+  width: 100%;
+  background-color: #D9D9D9;
+}
+.footer-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.footer-icons i.fa-brands {
+  font-size: 40px;
+  color: #FFFFFF;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  cursor: pointer;
+}
+.footer-info {
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+}
+
+.member {
+  width: 100%;
+  background-color: #F7F0F2;
+}
+.member-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 44px 0px 44px 0px;
+  text-align: center;
+}
+.member-container h3 {
+  font-weight: 500;
+  /* letter-spacing: 2px; */
+  text-transform: uppercase;
+  font-size: 54px;
+  font-weight: bold;
+}
+.member-container p {
+  font-size: 18px;
+  padding: 12px 0px 12px 0px;
+}
+.member-container button {
+  width: 20rem;
+  height: 3.75rem;
+  border-radius: 50px;
+  border: none;
+  background-color: #FA96AA;
+  -webkit-box-shadow: 0px 2px 5px darkgray;
+          box-shadow: 0px 2px 5px darkgray;
+  margin-top: 29px;
+  margin-bottom: 10px;
+}
+.member-container button a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "Quicksand";
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  border: none;
+}
+
+.products-template {
+  width: 100%;
+  margin: 22px 0px 22px 0px;
+}
+.products-template .product {
+  margin: auto;
+  width: 85%;
+}
+.products-template .product-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  -webkit-box-shadow: 2px 2px 5px darkgray;
+          box-shadow: 2px 2px 5px darkgray;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+.products-template .product-container img {
+  min-width: 100%;
+  border-bottom: 1px solid #FA96AA;
+  border-radius: 15px 15px 0px 0px;
+}
+.products-template .product-container .discount {
+  background-color: #FA96AA;
+  color: #FFFFFF;
+  text-align: center;
+  position: absolute;
+  font-weight: 100;
+  left: 220px;
+  font-size: 14px;
+  top: 265px;
+  padding: 5px 30px;
+  border-radius: 15px;
+}
+.products-template .product-container-text {
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 1rem 1rem;
+  color: #000000;
+}
+.products-template .product-container-text :nth-child(2) {
+  font-weight: bold;
+  padding-top: 7px;
+}

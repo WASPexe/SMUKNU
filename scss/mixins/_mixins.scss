@@ -1,0 +1,43 @@
+// Mixins
+@mixin flexLayout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@mixin flexRight{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+@mixin textStyles ($transform: uppercase) {
+    font-weight: 500;
+    /* letter-spacing: 2px; */
+    text-transform: $transform;
+}
+
+@mixin centering($topValue) {
+position: absolute;
+top: $topValue;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+@mixin button{
+    text-decoration: none;
+    color: $white;
+    font-family: $Quicksand;
+    font-weight: bold;
+    text-align: center;
+    font-size: $small;
+    border: none;
+}
+
+@mixin heading{
+    font-size: $heading;
+}
+
+@mixin shadow{
+        box-shadow: 2px 2px 5px darkgray;
+}
