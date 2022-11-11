@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* // PRE-LOADER
+@import "./pre-loader"; */
 /* GENERAL VARIABLES */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 .navbar .hamburger-menu .menu {
@@ -43,6 +45,22 @@ body {
 /* html{
     width: 380px;
 } */
+/* FADE REVEAL */
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: 1s all ease;
+  transition: 1s all ease;
+}
+
+.reveal.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 .rec-products {
   width: 100%;
 }
@@ -131,6 +149,12 @@ body {
 
 .accordion-section {
   margin: 3rem 1rem 3rem 1rem;
+}
+.accordion-section .accordion-container.active .panel {
+  display: block;
+}
+.accordion-section .accordion-container.active .accordion {
+  color: #FA96AA;
 }
 .accordion-section .accordion {
   background-color: #FFFFFF;

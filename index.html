@@ -9,13 +9,20 @@
   <!-- FONT AWEWSOME -->
   <script src="https://kit.fontawesome.com/d6b9648251.js" crossorigin="anonymous"></script>
 
-  <script src="/index-script.js/index.js" defer></script>
+  <script src="/index-script/index.js" defer></script>
   <script src="/pages/products/products-js/products.js" defer></script>
 
     <title>SMUKNU</title>
 </head>
 <body>
     
+    <!-- PRE-LOADER -->
+    <div id="loader">
+        <div id="shadow"></div>
+        <div id="box"></div>
+      </div>
+      <h4>Loader #6</h4>
+
     <!-- NAVBAR -->
     <nav class="navbar">
         <a href="/"></a><img src="/src/img/smuknu_logo.png" alt="SMUKNU Logo" class="logo-img">
@@ -64,7 +71,7 @@
     <!-- HEADER END -->
 
     <!-- SECTION 1 (UDVALGTE PRODUKTER)-->
-    <section class="rec-products">
+    <section class="rec-products reveal">
         <div class="rec-products-heading">
             <h2>udvalgt</h2>
             <h2>skønhed</h2>
@@ -76,7 +83,7 @@
     <!-- PRODUCT END -->
 
     <!-- SECTION 2 (CUSTOMER REVIEWS) -->
-    <section class="reviews">
+    <section class="reviews reveal">
         <div class="reviews-heading">
             <h2>skønheder</h2>
             <h2>udtaler</h2>
@@ -112,7 +119,7 @@
     <!-- REVIEWS END -->
 
     <!-- MEMBER SECTION -->
-    <section class="member">
+    <section class="member reveal">
         <div class="member-container">
             <h3>medlem?</h3>
             <p>Vær med i kundeklubben for nye videoer, rabatkoder og mere!</p>
@@ -139,9 +146,7 @@
 
     </footer>
 
-
-
-    
+    <script src="/js-style/fade-loader.js"></script>
 </body>
 
 

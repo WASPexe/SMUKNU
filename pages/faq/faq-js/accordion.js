@@ -1,21 +1,26 @@
+export const accordion = {
 
-/* Get element */
-let acc = document.getElementsByClassName('accordion');
-let i;
+  /* Get element */
+  acc : document.getElementsByClassName('accordion'),
 
-for (i = 0; i < acc.length; i++) {
-  /* Tjek for click */
-  acc[i].addEventListener("click", function() {
+    activate : () => {
 
-    /* Tilføj .active css klasse */
-    this.classList.toggle("active");
-    let panel = this.nextElementSibling;
-
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+      for (let i = 0; i < accordion.acc.length; i++) {
+        /* Tjek for click */
+        accordion.acc[i].addEventListener("click", function() {
+      
+          /* Tilføj .active css klasse */
+          this.classList.toggle("active");
+          let panel = this.nextElementSibling;
+      
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+          
+        });
+      }
     }
-    
-  });
 }
+
