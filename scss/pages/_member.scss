@@ -12,27 +12,95 @@
     }
 }
 
-.form{
+.form-container{
+    width: 85%;
+    background: #fff;
+    position: relative;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+    .input-group{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 1rem;
+        position: relative;
+    }
+    .input-group label{
+        margin-bottom: .2rem;
+    }
+    .input-group input, .input-group textarea{
+        background: transparent;
+        border: none;
+        padding: 10px 0;
+        border: 1px solid #707070;
+        font-size: 16px;
+    }
+
+    textarea{
+        height: 219px;
+    }
+    
+    button{
+        background: $mainPink;
+        color: #fff;
+        border-radius: 50px;
+        border: none;
+        padding: 10px 40px;
+        outline: 0;
+        cursor: pointer;
+        margin: 25px auto 10px;
+    }
+
+    .input-group span{
+        position: absolute;
+        bottom: 12px;
+        right: 17px;
+        font-size: 15px;
+        color: red;
+
+        i{
+            color: $mainPink;
+        }
+    }
+
+    #submit-error{
+        color: red;
+        font-size: 14px;
+    }
+}
+    
+
+/* .form{
     width: 85%;
     margin: auto;
     display: flex;
     flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    position: relative;
 
-
-    label{
-        font-size: 20px;
-        padding-bottom: .5rem;
-    }
-    input{
-       width: 100%;
-       height: 40px; 
-       margin-bottom: 1rem;
-    }
-
-    #inqury{
-        height: 219px;
+    .input-group, span{
+        margin-top: 1rem;
+        position: absolute;
+        bottom: 12px;
+        right: 17px;
+        
+        label{
+            font-size: 20px;
+            padding-bottom: .5rem;
+        }
+        input{
+            width: 100%;
+            height: 40px; 
+            margin-bottom: 1rem;
+        }
+        
+        #inqury{
+            height: 219px;
+        }
     }
 
     #submitBtn{
@@ -44,4 +112,4 @@
         background-color: $mainPink;
         font-weight: 500;
     }
-}
+} */

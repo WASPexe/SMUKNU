@@ -61,25 +61,34 @@
 
     <!-- FORM SECTION -->
     <section class="reveal">
-        <form class="form" action="">
-            
-            div#input-group
-            
-            <label for="fname">Fulde navn</label>
-            <input type="text" id="fname" name="fullname">
+        <form id="myForm" method="post" class="form-container">
+      
+            <div class="input-group">
+              <label for="name">Fuldenavn</label>
+              <input name="name" type="text" id="contact-name" onkeyup="validateName()">
+              <span id="name-error"></span>
+            </div>
+      
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input name="email" type="email" id="contact-email" onkeyup="validateEmail()">
+              <span id="email-error"></span>
+            </div>   
+      
+            <div class="input-group">
+              <label for="message">Ris og/eller ros</label>
+              <textarea name="message" rows="5" id="contact-message" onkeyup="validateMessage()"></textarea>
+              <span id="text-error"></span>
+            </div>
+      
+          <button type="submit" onclick="return validateForm()">Send</button>
+          <span id="submit-error"></span>
 
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email">
-
-            <label for="inqury">Ris og/eller ros</label>
-            <textarea id="inqury" name="inqury"></textarea>
-            
-            <input id="submitBtn" type="submit" value="Opret">
         </form>
-
+        <div id="result"></div>
     </section>
 
-
+<a href=""></a>
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-icons">

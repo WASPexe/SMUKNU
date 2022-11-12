@@ -219,9 +219,16 @@ body {
   margin: 0rem 1.5rem 0rem 1.5rem;
 }
 
-.form {
+.form-container {
   width: 85%;
+  background: #fff;
+  position: relative;
   margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.form-container .input-group {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,37 +236,88 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  margin: auto;
+  margin-top: 1rem;
+  position: relative;
 }
-.form label {
-  font-size: 20px;
-  padding-bottom: 0.5rem;
+.form-container .input-group label {
+  margin-bottom: 0.2rem;
 }
-.form input {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 1rem;
+.form-container .input-group input, .form-container .input-group textarea {
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+  border: 1px solid #707070;
+  font-size: 16px;
 }
-.form #inqury {
+.form-container textarea {
   height: 219px;
 }
-.form #submitBtn {
-  margin-top: 1rem;
-  width: 8rem;
-  height: 2.5rem;
-  text-decoration: none;
-  color: #FFFFFF;
-  font-family: "Quicksand";
-  font-weight: bold;
-  text-align: center;
-  font-size: 18px;
-  border: none;
+.form-container button {
+  background: #FA96AA;
+  color: #fff;
   border-radius: 50px;
-  background-color: #FA96AA;
-  font-weight: 500;
+  border: none;
+  padding: 10px 40px;
+  outline: 0;
+  cursor: pointer;
+  margin: 25px auto 10px;
+}
+.form-container .input-group span {
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
+  font-size: 15px;
+  color: red;
+}
+.form-container .input-group span i {
+  color: #FA96AA;
+}
+.form-container #submit-error {
+  color: red;
+  font-size: 14px;
 }
 
+/* .form{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    .input-group, span{
+        margin-top: 1rem;
+        position: absolute;
+        bottom: 12px;
+        right: 17px;
+
+        label{
+            font-size: 20px;
+            padding-bottom: .5rem;
+        }
+        input{
+            width: 100%;
+            height: 40px; 
+            margin-bottom: 1rem;
+        }
+
+        #inqury{
+            height: 219px;
+        }
+    }
+
+    #submitBtn{
+        margin-top: 1rem;
+        width: 8rem;
+        height: 2.5rem;
+        @include button;
+        border-radius: 50px;
+        background-color: $mainPink;
+        font-weight: 500;
+    }
+} */
 .products-header-container {
   background-color: #000000 !important;
   opacity: 0.9;
@@ -461,6 +519,11 @@ body {
   font-size: 18px;
   padding: 14px 0px 14px 0px;
 }
+@media (min-width: 728px) and (max-width: 1199px) {
+  .container-header .container-text p ::before {
+    content: "Alt hvad du behøver...";
+  }
+}
 .container-header .container-text button {
   width: 20rem;
   height: 3.75rem;
@@ -478,6 +541,16 @@ body {
   text-align: center;
   font-size: 18px;
   border: none;
+}
+@media (min-width: 728px) and (max-width: 1199px) {
+  .container-header .container-text button {
+    width: 35rem;
+  }
+}
+@media (min-width: 728px) and (max-width: 1199px) {
+  .container-header .container-text {
+    width: 90vw;
+  }
 }
 
 .footer {

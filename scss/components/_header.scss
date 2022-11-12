@@ -15,6 +15,7 @@
             object-fit:cover;
         }
     }
+
     
     .container-text{
         width: 100vw;
@@ -38,6 +39,13 @@
         p{
             font-size: $small;
             padding: 14px 0px 14px 0px;
+
+            @media(min-width:$tab) and (max-width: $desk - 1px) {
+                
+                ::before{
+                    content: 'Alt hvad du behøver...';
+                }
+            }
         }
 
         button{
@@ -51,6 +59,16 @@
             a{
                 @include button;
             }
+
+            @media (min-width:$tab) and (max-width: $desk - 1px) {
+                width: 35rem;
+            }
+            
         }
+
+        @media (min-width:$tab) and (max-width: $desk - 1px) {
+            width: 90vw;
+        }
+        
     }
 }
