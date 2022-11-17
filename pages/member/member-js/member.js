@@ -91,30 +91,20 @@ form.addEventListener('submit', function(e){
     return response.json()
   })
   .then(function(data){
+    console.log(data);
 
-  let result = {
-
-      resultTmpl : (dataObject) => `
-        <div class="result-container">
-          <h2>TAK!</h2>
-          <p class="customer-name">${dataObject.name}</p>
-          <p>Vi er enormt glade for at få dig som medlem</p>
-          <img src="/src/img/Product01-Balm.png" alt="">
-          <p>Kig i din inbox vi har sendt en lille velkomst gave</p>.
-          <div class="results-button"><a href="/index.html">Til forsiden</a></div>
-        </div>`,
-
-
-        showResult : () => {
-          
-          const resultList = document.querySelector('#result');
-
-          resultList.insertAdjacentHTML('beforeend', result.resultTmpl)
-        }
-        
-    }
-
-    result.showResult();
+    const resultList = document.querySelector('#result');
+    resultList.insertAdjacentHTML('beforeend', `
+    
+    <div class="result-container">
+      <h2>TAK!</h2>
+      <p class="customer-name">${data.result.name}</p>
+      <p>Vi er enormt glade for at få dig som medlem</p>
+      <img src="/src/img/Product01-Balm.png" alt="">
+      <p>Kig i din inbox vi har sendt en lille velkomst gave</p>.
+      <div class="results-button"><a href="/index.html">Til forsiden</a></div>
+    </div>`
+    )
 
   })
 })

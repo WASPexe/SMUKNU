@@ -1,17 +1,13 @@
 const reviews = {
 
   tmpl : (reviewObject) => `
-  <article id="review-container" class="reviews-container">
+  <article class="reviews-container">
     <div class="reviews-container-img">
         <img src="${reviewObject.image}" alt="SMUK Kunde">
+        <p>${reviewObject.name}<br>${reviewObject.byline}</p>    
     </div>
 
     <p class="review">${reviewObject.description}</p>
-
-    <div class="reviews-container-customer">
-        <p>${reviewObject.name}</p>
-        <p>${reviewObject.byline}</p>
-    </div>
     </article>`,
 
 

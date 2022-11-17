@@ -13,6 +13,7 @@
             width: 100vw;
             height: 90vh;
             object-fit:cover;
+            
         }
     }
 
@@ -40,7 +41,7 @@
             font-size: $small;
             padding: 14px 0px 14px 0px;
 
-            @media(min-width:$tab) and (max-width: $desk - 1px) {
+            @media(min-width:$tab) and (max-width: $desk) {
                 
                 ::before{
                     content: 'Alt hvad du behøver...';
@@ -60,13 +61,13 @@
                 @include button;
             }
 
-            @media (min-width:$tab) and (max-width: $desk - 1px) {
+            @media (min-width:$tab) and (max-width: $desk) {
                 width: 35rem;
             }
             
         }
 
-        @media (min-width:$tab) and (max-width: $desk - 1px) {
+        @media (min-width:$tab) and (max-width: $desk) {
             width: 90vw;
         }
         

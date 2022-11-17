@@ -34,18 +34,40 @@
                 top: 265px;
                 padding: 5px 30px;
                 border-radius: 15px;
+
+                @media (min-width:$tab) and (max-width: $desk) {
+                    left: 65%;
+                    top: 55%;
+                }
             }
             
             &-text {
                 width: 100%;
-                justify-content: flex-start;
                 padding: 1rem 1rem;
                 color: $black;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 
-                :nth-child(2){
+                @media (min-width:$tab) and (max-width: $desk) {
+                    height: 8rem;
+                }
+                .product-titel{
+                    justify-content: flex-start;
+                }
+
+                .price{
                     font-weight: bold;
                     padding-top: 7px;
+                    align-items: flex-end;
+
+
+                    @media (min-width:$tab) and (max-width: $desk) {
+                        
+                    }
                 }
+
             }
         }   
     }

@@ -8,8 +8,8 @@ const products = {
                 <img src="${productObject.image}" alt="">
                 ${productObject.discountInPercent ? `<span class="discount">Spar<br>${productObject.discountInPercent}%</span>` : ''}
                 <div class="product-container-text">
-                    <p>${productObject.title}</p>
-                    <p>${productObject.price}.</p>
+                    <p class="product-title">${productObject.title}</p>
+                    <p class="price">${productObject.price}.</p>
                 </div>
             </div>
         </div>`,

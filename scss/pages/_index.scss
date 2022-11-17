@@ -8,9 +8,26 @@
         font-size: $heading;
         font-weight: bold;
         padding: 44px 0px 22px 0px;
+
+        
     }
     .rec-products-heading h2:nth-child(2){
         color: $mainPink;
+    }
+
+    
+    @media (min-width:$tab) and (max-width: $desk) {
+            #products-list{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                
+                .product{
+                    width: 40%;
+                    height: 100%;
+                }
+            }
+
     }
 }
 
@@ -40,24 +57,69 @@
         font-size: $small;
         color: $quotes;
         
-        img{
-            border: 10px solid $mainPink;
-            border-radius: 50%;
-        }
-        
-        .review{
-            margin-top: 46px;
-        }
-        
-        &-customer{
-            width: 100%;
-            margin-top: 18px;
-            border-bottom: 1px solid $mainPink;
-            padding-bottom: 1.5rem;
-        }
+            img{
+                border: 10px solid $mainPink;
+                border-radius: 50%;
+            }
+            
+            .review{
+                margin-top: 46px;
+            }
+            
+            &-customer{
+                width: 100%;
+                margin-top: 18px;
+                border-bottom: 1px solid $mainPink;
+                padding-bottom: 1.5rem;
+            }
 
-        .reviews-container-customer p:nth-child(1){
-            font-weight: bold;
+            .reviews-container-customer p:nth-child(1){
+                font-weight: bold;
+            }
+
+        @media (min-width:$tab) and (max-width: $desk) {
+            width: 90%;
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 
+            "customer review";
+            margin-top: 3rem;
+            margin-bottom: 1,5rem;
+
+            &-img{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr .7fr;
+                grid-template-areas:
+                "img"
+                "name";
+                align-content: start;
+                grid-area: customer;
+
+                img{
+                    align-self: end;
+                    justify-self: center;
+                    grid-area: img;
+                }
+
+                p{
+                    margin-top: 1rem;
+                    grid-area: name;
+                }
+            }
+            .review{
+                align-self:flex-start;
+                grid-area: review;
+                margin-top: 1rem;
+                height: 100%;
+            }
+
+            :nth-child(even) #review-container{
+                grid-template-areas: 
+                "review customer";
+            }
         }
     }
+
 }

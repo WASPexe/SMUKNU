@@ -10,6 +10,7 @@
 
 .products{
     margin-top: 2rem;
+    width: 100%;
 
     .products-heading{
         font-size: $heading;
@@ -20,5 +21,14 @@
     
     :nth-child(2){
         color: $mainPink;
+    }
+
+    .products-template{
+        display: flex;
+        flex-wrap: wrap;
+
+        .product{
+            width: 40%;
+        }
     }
 }

@@ -16,6 +16,15 @@
             cursor:pointer;
         }
 
+        @media (min-width:$tab) and (max-width: $desk){
+            justify-content: center;
+
+            i.fa-brands{
+                margin: .5rem;
+                font-size: 80px;
+            }
+        }
+
     }
     &-info{
         font-size: $xsmall;

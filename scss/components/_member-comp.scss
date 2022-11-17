@@ -1,0 +1,96 @@
+.member{
+    width: 100%;
+    background-color: $memberBG;
+
+    &-images{
+        display: none;
+    }
+
+    &-container{
+        @include flexLayout;
+        flex-direction: column;
+        padding: 44px 0px 44px 0px;
+        text-align: center;
+
+        h3{
+            @include textStyles(uppercase);
+            font-size: $heading;
+            font-weight: bold;
+        }
+
+        p{
+            font-size: $small;
+            padding: 12px 0px 12px 0px;
+        }
+
+        button{
+            width: 20rem;
+            height: 3.75rem;
+            border-radius: 50px;
+            border: none;
+            background-color:$mainPink;
+            box-shadow: 0px 2px 5px darkgray;
+            margin-top: 29px;
+            margin-bottom: 10px;
+
+            a{
+                @include button;
+            }
+
+            @media (min-width:$tab) and (max-width: $desk){
+                a{
+                    font-size: 1rem;
+                }
+                
+            }
+
+        }
+    }
+
+    @media (min-width:$tab) and (max-width: $desk){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "Text Images";
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &-images{
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "img1 img2"
+            "img3 img4";
+            justify-content: center;
+            align-content: center;
+            grid-area: Images;
+        }
+        .img1{
+            grid-area: img1;
+            justify-self: center;
+            align-self: center;
+        }
+        .img2{
+            grid-area: img2;
+            justify-self: center;
+            align-self: center;
+        }
+        .img3{
+            grid-area: img3;
+            justify-self: center;
+            align-self: center;
+        }
+        .img4{
+            grid-area: img4;
+            justify-self: center;
+            align-self: center;
+        }
+        .member-container{
+            grid-area: Text;
+        }
+    }
+
+}
