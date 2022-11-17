@@ -4,7 +4,8 @@ const reviews = {
   <article class="reviews-container">
     <div class="reviews-container-img">
         <img src="${reviewObject.image}" alt="SMUK Kunde">
-        <p>${reviewObject.name}<br>${reviewObject.byline}</p>    
+        <p class="customer-name">${reviewObject.name}</br></p>
+        <p class="customer-type">${reviewObject.byline}</p>
     </div>
 
     <p class="review">${reviewObject.description}</p>
