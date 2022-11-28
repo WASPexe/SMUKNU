@@ -5,7 +5,11 @@
 
     h1{
         color: $mainPink;
-        padding: 0rem 10rem 0rem 10rem;
+        padding: 0rem 1rem 0rem 1rem;
+
+        @media (min-width:$tab) and (max-width: $desk){
+            padding: 0rem 10rem 0rem 10rem;
+        }
     }
 
     p{
@@ -71,4 +75,69 @@
         color: red;
         font-size: 14px;
     }
+}
+
+.complete{
+    display: none;
+}
+
+#result{
+    position: fixed;
+    
+
+    .result-container{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;    
+        @include flexLayout;
+        flex-direction: column;
+        text-align: center;
+        background-color: #F7F0F2;
+        z-index: 700;
+        
+        h2{
+            font-size: $heading;
+            font-weight: bold;
+        }
+
+        .customer-name{
+            font-size: $small;
+            color: $mainPink;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        img{
+            border: 7px solid $mainPink;
+            border-radius: 50%;
+            width: 50%;
+            margin-bottom: 2.5rem;
+        }
+        .message{
+            font-size: $small;
+            width: 80%;
+        }
+        .results-button{
+            width: 320px;
+            height: 60px;
+            background-color: $mainPink;
+            @include flexLayout;
+            margin-top: 1rem;
+            border-radius: 50px;
+            
+            a{
+                color: $white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.result-container:nth-child(5){
+    font-size: $small;
+}
+.result-container p:nth-child(3){
+    margin-bottom: 2rem;
 }
